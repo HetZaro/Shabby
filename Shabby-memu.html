@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Меню - Shabby Restaurant</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#f97316',secondary:'#fdba74'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Roboto', sans-serif;
+      }
+ .hero-gradient {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(249, 115, 22, 0.3),
+        rgba(253, 186, 116, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease-in-out infinite;
+    will-change: background-position;
+}
+      @keyframes gradientFlow {
+          0% {
+              background-position: 0% 0%;
+          }
+          50% {
+              background-position: 100% 100%;
+          }
+          100% {
+              background-position: 0% 0%;
+          }
+      }
+      .footer-gradient {
+          background-image: linear-gradient(
+              to right bottom,
+              rgba(249, 115, 22, 0.2),
+              rgba(253, 186, 116, 0.15),
+              rgba(255, 255, 255, 0.05)
+          );
+          background-size: 200% 200%;
+          animation: gradientFlow 15s ease-in-out infinite;
+          will-change: background-position;
+      }
+    </style>
+</head>
+<body class="bg-gray-50">
+<header class="w-full bg-white shadow-sm">
+    <div
+      class="container mx-auto px-4 py-3 flex items-center justify-between"
+    >
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" class="h-10 w-auto">
+</a>
+      <nav class="hidden md:flex items-center space-x-6">
+        <a
+          href="Shabby-memu.html"
+          class="text-gray-700 hover:text-primary transition-colors"
+          >Меню</a
+        >
+        <a
+          href="Shabby-university.html"
+          class="text-gray-700 hover:text-primary transition-colors"
+          >Кулинарный Университет</a
+        >
+        <a
+          href="Shabby-wiskey.html"
+          class="text-gray-700 hover:text-primary transition-colors"
+          >Школа Виски</a
+        >
+        <a
+          href="Shabby-delivery.html"
+          class="text-gray-700 hover:text-primary transition-colors"
+          >Доставка</a
+        >
+        <a
+          href="Shabby-contact.html"
+          class="text-gray-700 hover:text-primary transition-colors"
+          >Контакты</a
+        >
+      </nav>
+      <button
+        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+      >
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </div>
+  </header>
+<!-- Menu Hero Section -->
+<section class="py-16 hero-gradient">
+<div class="container mx-auto px-4 text-center">
+<h1 class="text-4xl md:text-5xl font-bold mb-6">Наше <span class="text-primary">Меню</span></h1>
+<p class="text-gray-600 max-w-2xl mx-auto">
+Откройте для себя изысканные блюда, приготовленные с любовью и вниманием к каждой детали
+</p>
+</div>
+</section>
+<!-- Menu Categories -->
+<section class="py-16">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Закуски -->
+<div class="bg-white rounded shadow-sm overflow-hidden">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Elegant%20appetizer%20plate%20with%20beautifully%20arranged%20bruschetta%20topped%20with%20fresh%20ingredients%20garnished%20with%20microgreens%20on%20a%20rustic%20wooden%20table%20in%20soft%20natural%20lighting&width=600&height=400&seq=6&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-4">Закуски</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-center">
+<span>Брускетта с томатами</span>
+<span class="text-primary font-medium">380 ₽</span>
+</li>
+<li class="flex justify-between items-center">
+<span>Карпаччо из говядины</span>
+<span class="text-primary font-medium">520 ₽</span>
+</li>
+<li class="flex justify-between items-center">
+<span>Тартар из тунца</span>
+<span class="text-primary font-medium">490 ₽</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Основные блюда -->
+<div class="bg-white rounded shadow-sm overflow-hidden">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Perfectly%20cooked%20medium%20rare%20steak%20with%20roasted%20vegetables%20and%20sauce%20beautifully%20plated%20on%20a%20dark%20ceramic%20plate%20in%20an%20upscale%20restaurant%20setting%20with%20professional%20lighting&width=600&height=400&seq=7&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-4">Основные блюда</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-center">
+<span>Стейк Рибай</span>
+<span class="text-primary font-medium">1200 ₽</span>
+</li>
+<li class="flex justify-between items-center">
+<span>Филе лосося</span>
+<span class="text-primary font-medium">850 ₽</span>
+</li>
+<li class="flex justify-between items-center">
+<span>Утиная грудка</span>
+<span class="text-primary font-medium">780 ₽</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Десерты -->
+<div class="bg-white rounded shadow-sm overflow-hidden">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Elegant%20dessert%20plate%20with%20chocolate%20fondant%20cake%20decorated%20with%20fresh%20berries%20mint%20leaves%20and%20powdered%20sugar%20served%20with%20vanilla%20ice%20cream%20in%20fine%20dining%20presentation&width=600&height=400&seq=8&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-4">Десерты</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-center">
+<span>Шоколадный фондан</span>
+<span class="text-primary font-medium">450 ₽</span>
+</li>
+<li class="flex justify-between items-center">
+<span>Тирамису</span>
+<span class="text-primary font-medium">380 ₽</span>
+</li>
+<li class="flex justify-between items-center">
+<span>Чизкейк</span>
+<span class="text-primary font-medium">420 ₽</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" style="height: 40px; width: auto; filter: invert(100%);">
+</a>
+<p class="text-gray-400">
+Современный ресторан с винтажной душой в сердце Вологды
+</p>
+</div>
+
+<div>
+<h3 class="text-lg font-bold mb-4">Услуги</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Бронирование</a></li>
+<li><a href="delivery.html" class="text-gray-400 hover:text-white transition-colors">Доставка</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Кейтеринг</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Мероприятия</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">Контакты</h3>
+<ul class="space-y-2">
+<li class="flex items-start gap-2">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">ул. Мира, д.82 6 этаж, Вологда</span>
+</li>
+<li class="flex items-start gap-2">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">+7 (8172) 55-55-55</span>
+</li>
+<li class="flex items-start gap-2">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@shabby-restaurant.ru</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2025 Shabby. Все права защищены.</p>
+<div class="flex items-center space-x-4 mt-4 md:mt-0">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-visa-line ri-lg text-gray-400"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-mastercard-line ri-lg text-gray-400"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-paypal-line ri-lg text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.md\\:hidden');
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+mobileMenu.innerHTML = `
+<div class="p-4 flex justify-between items-center border-b">
+<a href="index.html" class="font-['Pacifico'] text-2xl text-gray-800">Shabby</a>
+<button class="w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<nav class="p-4">
+<ul class="space-y-4">
+<li><a href="menu.html" class="block py-2 text-primary font-medium">Меню</a></li>
+<li><a href="culinary.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Кулинарный Университет</a></li>
+<li><a href="whiskey.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Школа Виски</a></li>
+<li><a href="delivery.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Доставка</a></li>
+<li><a href="contacts.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Контакты</a></li>
+</ul>
+</nav>
+`;
+document.body.appendChild(mobileMenu);
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+mobileMenu.querySelector('button').addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+</script>
+</body>
+</html>

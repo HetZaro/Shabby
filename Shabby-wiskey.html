@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shabby - Школа Виски</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#f97316", secondary: "#fdba74" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Roboto', sans-serif;
+      background:
+      radial-gradient(circle at 20% 35%, rgba(249, 115, 22, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 44%, rgba(249, 115, 22, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(253, 186, 116, 0.05) 0%, transparent 50%),
+      #ffffff;
+      background-attachment: fixed;
+      position: relative;
+      }
+      body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.015;
+      pointer-events: none;
+      z-index: -1;
+      }
+    </style>
+        <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Roboto', sans-serif;
+      }
+ .hero-gradient {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(249, 115, 22, 0.3),
+        rgba(253, 186, 116, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease-in-out infinite;
+    will-change: background-position;
+}
+      @keyframes gradientFlow {
+          0% {
+              background-position: 0% 0%;
+          }
+          50% {
+              background-position: 100% 100%;
+          }
+          100% {
+              background-position: 0% 0%;
+          }
+      }
+      .footer-gradient {
+          background-image: linear-gradient(
+              to right bottom,
+              rgba(249, 115, 22, 0.2),
+              rgba(253, 186, 116, 0.15),
+              rgba(255, 255, 255, 0.05)
+          );
+          background-size: 200% 200%;
+          animation: gradientFlow 15s ease-in-out infinite;
+          will-change: background-position;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-full bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" class="h-10 w-auto">
+</a>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a
+            href="Shabby-memu.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Меню</a
+          >
+          <a
+            href="Shabby-university.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Кулинарный Университет</a
+          >
+          <a
+            href="Shabby-wiskey.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Школа Виски</a
+          >
+          <a
+            href="Shabby-delivery.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Доставка</a
+          >
+          <a
+            href="Shabby-contact.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Контакты</a
+          >
+        </nav>
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </header>
+    <main class="min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold mb-4">
+            Школа <span class="text-primary">Виски</span>
+          </h1>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Погрузитесь в увлекательный мир виски вместе с нашими экспертами.
+            Изучите историю, традиции и культуру этого благородного напитка
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white/80 backdrop-blur-sm p-8 rounded shadow-sm">
+            <h2 class="text-2xl font-bold mb-6">О нашей школе:</h2>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary shrink-0"
+                >
+                  <i class="ri-book-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Программа обучения:</h3>
+                  <p class="text-gray-600">
+                    4 уровня подготовки от начального до эксперта
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary shrink-0"
+                >
+                  <i class="ri-calendar-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Длительность курса:</h3>
+                  <p class="text-gray-600">8 недель, 2 занятия в неделю</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary shrink-0"
+                >
+                  <i class="ri-group-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Формат занятий:</h3>
+                  <p class="text-gray-600">Небольшие группы до 8 человек</p>
+                  <p class="text-gray-600">Индивидуальные консультации</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary shrink-0"
+                >
+                  <i class="ri-medal-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">По окончании курса:</h3>
+                  <p class="text-gray-600">Сертификат международного образца</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="w-full mt-8 bg-primary text-white py-3 px-6 rounded-button hover:bg-primary/90 transition-colors"
+            >
+              Записаться на курс
+            </button>
+          </div>
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded shadow-sm overflow-hidden"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=luxury%20whiskey%20tasting%20setup%20with%20various%20premium%20whiskey%20bottles%2C%20crystal%20glasses%2C%20and%20tasting%20notes%20in%20a%20warm%2C%20sophisticated%20environment%20with%20wooden%20elements%20and%20soft%20lighting&width=800&height=600&seq=2&orientation=landscape"
+              alt="Школа виски"
+              class="w-full h-[300px] object-cover object-top"
+            />
+            <div class="p-8">
+              <h2 class="text-2xl font-bold mb-6">Программа курса</h2>
+              <div class="space-y-4">
+                <div class="p-4 border rounded">
+                  <h3 class="font-semibold mb-2">Базовый уровень</h3>
+                  <p class="text-gray-600">
+                    История виски, основные регионы и стили
+                  </p>
+                </div>
+                <div class="p-4 border rounded">
+                  <h3 class="font-semibold mb-2">Продвинутый уровень</h3>
+                  <p class="text-gray-600">
+                    Технология производства и выдержки
+                  </p>
+                </div>
+                <div class="p-4 border rounded">
+                  <h3 class="font-semibold mb-2">Профессиональный уровень</h3>
+                  <p class="text-gray-600">
+                    Дегустация и оценка качества виски
+                  </p>
+                </div>
+                <div class="p-4 border rounded">
+                  <h3 class="font-semibold mb-2">Эксперт</h3>
+                  <p class="text-gray-600">Коллекционирование и инвестиции</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded shadow-sm mb-12">
+          <h2 class="text-2xl font-bold mb-6 text-center">
+            Ближайшие мероприятия
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 border rounded">
+              <div class="text-primary mb-2">25 апреля 2025</div>
+              <h3 class="font-semibold mb-2">Дегустация шотландского виски</h3>
+              <p class="text-gray-600 mb-4">
+                Знакомство с лучшими сортами из региона Speyside
+              </p>
+              <button
+                id="event1Details"
+                class="w-full bg-primary/10 text-primary py-2 px-4 rounded-button hover:bg-primary/20 transition-colors"
+              >
+                Подробнее
+              </button>
+            </div>
+            <div class="p-4 border rounded">
+              <div class="text-primary mb-2">2 мая 2025</div>
+              <h3 class="font-semibold mb-2">Мастер-класс по бурбону</h3>
+              <p class="text-gray-600 mb-4">
+                История и особенности американского виски
+              </p>
+              <button
+                id="event2Details"
+                class="w-full bg-primary/10 text-primary py-2 px-4 rounded-button hover:bg-primary/20 transition-colors"
+              >
+                Подробнее
+              </button>
+            </div>
+            <div class="p-4 border rounded">
+              <div class="text-primary mb-2">9 мая 2025</div>
+              <h3 class="font-semibold mb-2">Японский виски</h3>
+              <p class="text-gray-600 mb-4">
+                Традиции и инновации восточного виски
+              </p>
+              <button
+                id="event3Details"
+                class="w-full bg-primary/10 text-primary py-2 px-4 rounded-button hover:bg-primary/20 transition-colors"
+              >
+                Подробнее
+              </button>
+            </div>
+          </div>
+          <div
+            id="eventDetailsModal"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg w-full max-w-4xl mx-4 overflow-hidden"
+            >
+              <div class="p-6 border-b">
+                <div class="flex justify-between items-center">
+                  <h3 id="eventTitle" class="text-2xl font-semibold"></h3>
+                  <button
+                    id="closeEventModal"
+                    class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700"
+                  >
+                    <i class="ri-close-line ri-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="space-y-6">
+                    <div>
+                      <div class="flex items-center gap-2 text-primary mb-4">
+                        <i class="ri-calendar-line"></i>
+                        <span id="eventDate"></span>
+                      </div>
+                      <div id="eventDescription" class="text-gray-600"></div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">Программа мероприятия:</h4>
+                      <div
+                        id="eventProgram"
+                        class="space-y-2 text-gray-600"
+                      ></div>
+                    </div>
+                    <div class="space-y-2">
+                      <div class="flex items-center gap-2">
+                        <i class="ri-money-dollar-circle-line text-primary"></i>
+                        <span id="eventPrice" class="text-gray-600"></span>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <i class="ri-user-star-line text-primary"></i>
+                        <span id="eventExpert" class="text-gray-600"></span>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <i class="ri-group-line text-primary"></i>
+                        <span id="eventSeats" class="text-gray-600"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-4">
+                      Фотографии с прошлых мероприятий:
+                    </h4>
+                    <div id="eventGallery" class="grid grid-cols-2 gap-4"></div>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                  <button
+                    id="eventEnrollButton"
+                    class="bg-primary text-white py-3 px-6 rounded-button hover:bg-primary/90 transition-colors"
+                  >
+                    Записаться на мероприятие
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <h2 class="text-2xl font-bold mb-4">Готовы начать обучение?</h2>
+          <button
+            id="enrollButton"
+            class="inline-block bg-primary text-white py-3 px-6 rounded-button hover:bg-primary/90 transition-colors"
+          >
+            Записаться на курс
+          </button>
+        </div>
+        <div
+          id="enrollModal"
+          class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50"
+        >
+          <div class="bg-white rounded-lg w-full max-w-lg mx-4 overflow-hidden">
+            <div class="p-6 border-b">
+              <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold">Запись на курс</h3>
+                <button
+                  id="closeModal"
+                  class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700"
+                >
+                  <i class="ri-close-line ri-lg"></i>
+                </button>
+              </div>
+            </div>
+            <form id="enrollForm" class="p-6 space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >ФИО</label
+                >
+                <input
+                  type="text"
+                  id="fullName"
+                  required
+                  class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Телефон</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Уровень курса</label
+                >
+                <div class="relative">
+                  <select
+                    id="courseLevel"
+                    required
+                    class="w-full px-4 py-2 border rounded appearance-none focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none pr-8"
+                  >
+                    <option value="">Выберите уровень</option>
+                    <option value="basic">Базовый уровень</option>
+                    <option value="advanced">Продвинутый уровень</option>
+                    <option value="professional">
+                      Профессиональный уровень
+                    </option>
+                    <option value="expert">Эксперт</option>
+                  </select>
+                  <div
+                    class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none w-6 h-6 flex items-center justify-center"
+                  >
+                    <i class="ri-arrow-down-s-line"></i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Предпочтительное время занятий</label
+                >
+                <input
+                  type="text"
+                  id="preferredTime"
+                  required
+                  class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Комментарий</label
+                >
+                <textarea
+                  id="comment"
+                  rows="3"
+                  class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
+                ></textarea>
+              </div>
+              <div class="flex justify-end gap-3 mt-6">
+                <button
+                  type="button"
+                  id="cancelButton"
+                  class="px-4 py-2 border rounded-button hover:bg-gray-50 transition-colors"
+                >
+                  Отмена
+                </button>
+                <button
+                  type="submit"
+                  class="px-4 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors"
+                >
+                  Отправить заявку
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          id="successModal"
+          class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50"
+        >
+          <div class="bg-white rounded-lg w-full max-w-md mx-4 p-6">
+            <div class="text-center">
+              <div
+                class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-check-line ri-2x text-green-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Заявка отправлена!</h3>
+              <p class="text-gray-600 mb-6">
+                Мы свяжемся с вами в ближайшее время для подтверждения записи.
+              </p>
+              <button
+                id="successCloseButton"
+                class="px-6 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" style="height: 40px; width: auto; filter: invert(100%);">
+</a>
+            <p class="text-gray-400">
+              Современный ресторан с винтажной душой в сердце Вологды
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Меню</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Основное меню</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Бизнес-ланч</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Винная карта</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Десерты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Услуги</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Бронирование</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Shabby-delivery.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Кейтеринг</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Мероприятия</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Контакты</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-400"
+                  >ул. Мира, д.82 6 этаж, Вологда</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-400">8 (8172) 570-410</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-400">info@shabby-restaurant.ru</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Shabby. Все права защищены.
+          </p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-visa-line ri-lg text-gray-400"></i>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-mastercard-line ri-lg text-gray-400"></i>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-paypal-line ri-lg text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const eventData = {
+          event1Details: {
+            title: "Дегустация шотландского виски",
+            date: "25 апреля 2025, 19:00",
+            description:
+              "Погрузитесь в мир шотландского виски региона Speyside. На дегустации вы познакомитесь с лучшими сортами этого региона, узнаете об истории производства и особенностях каждого представленного виски.",
+            program: [
+              "Знакомство с историей региона Speyside",
+              "Особенности производства виски в регионе",
+              "Дегустация 6 видов односолодового виски",
+              "Мастер-класс по правильной дегустации",
+              "Фуршет и неформальное общение",
+            ],
+            price: "5 500 ₽",
+            expert:
+              "Александр Петровский - сертифицированный эксперт по шотландскому виски",
+            seats: "Осталось 6 мест из 12",
+            gallery: [
+              "https://readdy.ai/api/search-image?query=luxury%20whiskey%20tasting%20event%20with%20professional%20sommelier%20explaining%20whiskey%20characteristics%20to%20attentive%20guests%20in%20an%20elegant%20setting%20with%20mood%20lighting%20and%20premium%20glassware&width=400&height=300&seq=1&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=close%20up%20of%20premium%20whiskey%20tasting%20setup%20with%20crystal%20glasses%2C%20tasting%20notes%20and%20various%20whiskey%20bottles%20arranged%20professionally%20on%20wooden%20table&width=400&height=300&seq=2&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=group%20of%20people%20enjoying%20whiskey%20tasting%20experience%2C%20taking%20notes%20and%20discussing%20flavors%20in%20an%20upscale%20bar%20setting&width=400&height=300&seq=3&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=elegant%20whiskey%20bar%20interior%20with%20display%20of%20rare%20scotch%20bottles%20and%20ambient%20lighting%20creating%20sophisticated%20atmosphere&width=400&height=300&seq=4&orientation=landscape",
+            ],
+          },
+          event2Details: {
+            title: "Мастер-класс по бурбону",
+            date: "2 мая 2025, 19:00",
+            description:
+              "Увлекательное путешествие в мир американского виски. Вы узнаете все о производстве бурбона, его истории и культуре потребления.",
+            program: [
+              "История появления бурбона",
+              "Технология производства и требования к бурбону",
+              "Дегустация 5 премиальных бурбонов",
+              "Коктейльная часть - классические коктейли на основе бурбона",
+              "Фуршет",
+            ],
+            price: "4 800 ₽",
+            expert: "Михаил Соколов - бренд-амбассадор американских виски",
+            seats: "Осталось 8 мест из 12",
+            gallery: [
+              "https://readdy.ai/api/search-image?query=bourbon%20tasting%20event%20featuring%20premium%20american%20whiskey%20bottles%20and%20professional%20tasting%20setup%20in%20rustic%20environment&width=400&height=300&seq=5&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=mixologist%20demonstrating%20cocktail%20preparation%20with%20bourbon%20in%20upscale%20bar%20setting%20with%20impressed%20audience&width=400&height=300&seq=6&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=collection%20of%20premium%20bourbon%20bottles%20displayed%20on%20wooden%20shelf%20with%20warm%20lighting%20and%20vintage%20decor&width=400&height=300&seq=7&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=people%20participating%20in%20bourbon%20tasting%20masterclass%2C%20taking%20notes%20and%20enjoying%20american%20whiskey%20experience&width=400&height=300&seq=8&orientation=landscape",
+            ],
+          },
+          event3Details: {
+            title: "Японский виски",
+            date: "9 мая 2025, 19:00",
+            description:
+              "Откройте для себя утонченный мир японского виски. Познакомьтесь с традициями производства и уникальными особенностями этого благородного напитка.",
+            program: [
+              "История японского виски",
+              "Особенности производства в Японии",
+              "Дегустация 5 видов премиального японского виски",
+              "Японские традиции употребления виски",
+              "Фуршет в японском стиле",
+            ],
+            price: "6 200 ₽",
+            expert: "Дмитрий Васильев - эксперт по азиатским крепким напиткам",
+            seats: "Осталось 4 места из 12",
+            gallery: [
+              "https://readdy.ai/api/search-image?query=japanese%20whisky%20tasting%20setup%20with%20traditional%20japanese%20elements%2C%20premium%20bottles%20and%20elegant%20glassware&width=400&height=300&seq=9&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=expert%20presenting%20japanese%20whisky%20to%20guests%20in%20modern%20asian%20inspired%20setting%20with%20subtle%20lighting&width=400&height=300&seq=10&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=collection%20of%20rare%20japanese%20whisky%20bottles%20displayed%20with%20zen%20aesthetic%20and%20minimalist%20decor&width=400&height=300&seq=11&orientation=landscape",
+              "https://readdy.ai/api/search-image?query=people%20enjoying%20japanese%20whisky%20tasting%20experience%20in%20elegant%20environment%20with%20japanese%20design%20elements&width=400&height=300&seq=12&orientation=landscape",
+            ],
+          },
+        };
+        const enrollButton = document.getElementById("enrollButton");
+        const eventDetailsModal = document.getElementById("eventDetailsModal");
+        const closeEventModal = document.getElementById("closeEventModal");
+        function showEventDetails(eventId) {
+          const data = eventData[eventId];
+          document.getElementById("eventTitle").textContent = data.title;
+          document.getElementById("eventDate").textContent = data.date;
+          document.getElementById("eventDescription").textContent = data.description;
+          document.getElementById("eventPrice").textContent = data.price;
+          document.getElementById("eventExpert").textContent = data.expert;
+          document.getElementById("eventSeats").textContent = data.seats;
+          const programHtml = data.program
+            .map((item) => `<div>• ${item}</div>`)
+            .join("");
+          document.getElementById("eventProgram").innerHTML = programHtml;
+          const galleryHtml = data.gallery
+            .map(
+              (img) => `
+      <div class="aspect-[4/3] rounded overflow-hidden">
+      <img src="${img}" alt="" class="w-full h-full object-cover">
+      </div>
+      `,
+            )
+            .join("");
+          document.getElementById("eventGallery").innerHTML = galleryHtml;
+          eventDetailsModal.classList.remove("hidden");
+          eventDetailsModal.classList.add("flex");
+          document.body.style.overflow = "hidden";
+        }
+        document
+          .getElementById("event1Details")
+          .addEventListener("click", () => showEventDetails("event1Details"));
+        document
+          .getElementById("event2Details")
+          .addEventListener("click", () => showEventDetails("event2Details"));
+        document
+          .getElementById("event3Details")
+          .addEventListener("click", () => showEventDetails("event3Details"));
+        closeEventModal.addEventListener("click", () => {
+          eventDetailsModal.classList.add("hidden");
+          eventDetailsModal.classList.remove("flex");
+          document.body.style.overflow = "";
+        });
+        document.getElementById("eventEnrollButton").addEventListener("click", () => {
+          eventDetailsModal.classList.add("hidden");
+          eventDetailsModal.classList.remove("flex");
+          enrollModal.classList.remove("hidden");
+          enrollModal.classList.add("flex");
+        });
+        const enrollModal = document.getElementById("enrollModal");
+        const closeModal = document.getElementById("closeModal");
+        const cancelButton = document.getElementById("cancelButton");
+        const enrollForm = document.getElementById("enrollForm");
+        const successModal = document.getElementById("successModal");
+        const successCloseButton = document.getElementById("successCloseButton");
+        const additionalEnrollButton = document.querySelector(
+          ".bg-white\\/80 .bg-primary",
+        );
+        function showModal(modal) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          document.body.style.overflow = "hidden";
+        }
+        function hideModal(modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.style.overflow = "";
+        }
+        enrollButton.addEventListener("click", () => showModal(enrollModal));
+        additionalEnrollButton.addEventListener("click", () =>
+          showModal(enrollModal),
+        );
+        closeModal.addEventListener("click", () => hideModal(enrollModal));
+        cancelButton.addEventListener("click", () => hideModal(enrollModal));
+        successCloseButton.addEventListener("click", () => hideModal(successModal));
+        enrollForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          hideModal(enrollModal);
+          showModal(successModal);
+          enrollForm.reset();
+        });
+        const menuButton = document.querySelector(".md\\:hidden");
+        const mobileMenu = document.createElement("div");
+        mobileMenu.className =
+          "fixed inset-0 bg-white/80 backdrop-blur-sm z-50 transform translate-x-full transition-transform duration-300 ease-in-out";
+        mobileMenu.innerHTML = `
+      <div class="p-4 flex justify-between items-center border-b">
+      <a href="index.html" class="font-['Pacifico'] text-2xl text-gray-800">Shabby</a>
+      <button class="w-10 h-10 flex items-center justify-center text-gray-700">
+      <i class="ri-close-line ri-lg"></i>
+      </button>
+      </div>
+      <nav class="p-4">
+      <ul class="space-y-4">
+      <li><a href="menu.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Меню</a></li>
+      <li><a href="culinary.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Кулинарный Университет</a></li>
+      <li><a href="whiskey.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Школа Виски</a></li>
+      <li><a href="whiskey.html" class="block py-2 text-primary">Школа Виски</a></li>
+      <li><a href="contacts.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Контакты</a></li>
+      </ul>
+      </nav>
+      `;
+        document.body.appendChild(mobileMenu);
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+        mobileMenu.querySelector("button").addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+        });
+      });
+    </script>
+  </body>
+</html>

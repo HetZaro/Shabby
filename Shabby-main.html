@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shabby - Современный ресторан с винтажной душой</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#f97316", secondary: "#fdba74" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Roboto', sans-serif;
+      }
+ .hero-gradient {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(249, 115, 22, 0.3),
+        rgba(253, 186, 116, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease-in-out infinite;
+    will-change: background-position;
+}
+      @keyframes gradientFlow {
+          0% {
+              background-position: 0% 0%;
+          }
+          50% {
+              background-position: 100% 100%;
+          }
+          100% {
+              background-position: 0% 0%;
+          }
+      }
+      .footer-gradient {
+          background-image: linear-gradient(
+              to right bottom,
+              rgba(249, 115, 22, 0.2),
+              rgba(253, 186, 116, 0.15),
+              rgba(255, 255, 255, 0.05)
+          );
+          background-size: 200% 200%;
+          animation: gradientFlow 15s ease-in-out infinite;
+          will-change: background-position;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <header class="w-full bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" class="h-10 w-auto">
+</a>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a
+            href="Shabby-memu.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Меню</a
+          >
+          <a
+            href="Shabby-university.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Кулинарный Университет</a
+          >
+          <a
+            href="Shabby-wiskey.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Школа Виски</a
+          >
+          <a
+            href="Shabby-delivery.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Доставка</a
+          >
+          <a
+            href="Shabby-contact.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Контакты</a
+          >
+        </nav>
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </header>
+    <section class="w-full hero-gradient py-16 md:py-24">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="inline-block px-4 py-1 mb-4 bg-primary text-white rounded-full text-sm"
+        >
+          Современный ресторан
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="text-primary">Shabby</span> - Добро пожаловать в Shabby -
+          Современный ресторан с винтажной душой
+        </h1>
+        <p class="text-gray-700 max-w-2xl mx-auto mb-8">
+          Современный ресторан в сердце Вологды! Место, где вкусная еда,
+          приятное обслуживание и отличное настроение ждут вас!
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="Shabby-memu.html"
+            class="px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
+          >
+            Наше Меню
+          </a>
+          <a
+            href="Shabby-contact.html"
+            class="px-6 py-3 bg-white text-gray-800 border border-gray-300 rounded-button hover:bg-gray-50 transition-colors !rounded-button whitespace-nowrap"
+          >
+            Контакты
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded shadow-sm">
+            <h2 class="text-2xl font-bold mb-4">
+              Наше <span class="text-primary">Меню</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Откройте для себя наши вкусные блюда, приготовленные из свежих
+              местных ингредиентов. Наше меню сочетает классические рецепты с
+              современными кулинарными тенденциями.
+            </p>
+            <a
+              href="Shabby-memu.html"
+              class="inline-block px-5 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
+            >
+              Посмотреть Меню
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded shadow-sm">
+            <h2 class="text-2xl font-bold mb-4">
+              Наше <span class="text-primary">Расположение</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Посетите нас в самом сердце Вологды. Наш ресторан расположен в
+              историческом здании с уютной атмосферой и прекрасным видом на
+              город.
+            </p>
+            <a
+              href="Shabby-contact.html"
+              class="inline-block px-5 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
+            >
+              Найти Нас
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded shadow-sm">
+            <h2 class="text-2xl font-bold mb-4">
+              Забронировать <span class="text-primary">Столик</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Забронируйте столик уже сегодня, чтобы насладиться незабываемым
+              ужином в нашем ресторане. Мы рекомендуем бронирование для
+              гарантированного места.
+            </p>
+            <a
+              href="#booking"
+              class="inline-block px-5 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
+            >
+              Позвонить Сейчас
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Специальные <span class="text-primary">Предложения</span>
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Откройте для себя наши сезонные блюда и специальные предложения,
+            которые меняются каждую неделю
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded overflow-hidden shadow-sm">
+            <div
+              class="h-56 bg-gray-200"
+              style="background-image: url('https://readdy.ai/api/search-image?query=Elegant%2520gourmet%2520dish%2520with%2520salmon%2520fillet%2520perfectly%2520cooked%2520with%2520fresh%2520vegetables%2520and%2520delicate%2520sauce%2520on%2520a%2520white%2520plate%2520with%2520minimalist%2520presentation%2520in%2520a%2520high-end%2520restaurant%2520setting%2520with%2520soft%2520lighting&width=600&height=400&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Филе лосося с овощами</h3>
+              <p class="text-gray-600 mb-4">
+                Нежное филе лосося, приготовленное на гриле, подается с
+                сезонными овощами и соусом из белого вина.
+              </p>
+              <p class="text-primary font-bold">850 ₽</p>
+            </div>
+          </div>
+          <div class="bg-white rounded overflow-hidden shadow-sm">
+            <div
+              class="h-56 bg-gray-200"
+              style="background-image: url('https://readdy.ai/api/search-image?query=Perfectly%2520cooked%2520beef%2520steak%2520medium%2520rare%2520with%2520roasted%2520potatoes%2520and%2520grilled%2520vegetables%2520on%2520a%2520dark%2520plate%2520with%2520herb%2520garnish%2520in%2520an%2520elegant%2520restaurant%2520setting%2520with%2520soft%2520lighting&width=600&height=400&seq=2&orientation=landscape'); background-size: cover; background-position: center;"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Стейк Рибай</h3>
+              <p class="text-gray-600 mb-4">
+                Сочный стейк из мраморной говядины, подается с запеченным
+                картофелем и соусом из черного перца.
+              </p>
+              <p class="text-primary font-bold">1200 ₽</p>
+            </div>
+          </div>
+          <div class="bg-white rounded overflow-hidden shadow-sm">
+            <div
+              class="h-56 bg-gray-200"
+              style="background-image: url('https://readdy.ai/api/search-image?query=Elegant%2520dessert%2520presentation%2520with%2520chocolate%2520fondant%2520cake%2520with%2520molten%2520center%2520served%2520with%2520vanilla%2520ice%2520cream%2520and%2520fresh%2520berries%2520with%2520mint%2520garnish%2520on%2520a%2520stylish%2520plate%2520in%2520a%2520fine%2520dining%2520setting&width=600&height=400&seq=3&orientation=landscape'); background-size: cover; background-position: center;"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Шоколадный фондан</h3>
+              <p class="text-gray-600 mb-4">
+                Теплый шоколадный десерт с жидкой начинкой, подается с ванильным
+                мороженым и свежими ягодами.
+              </p>
+              <p class="text-primary font-bold">450 ₽</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a
+            href="#menu"
+            class="inline-block px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
+          >
+            Посмотреть все меню
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <div class="rounded-lg overflow-hidden shadow-sm">
+              <img
+                src="https://readdy.ai/api/search-image?query=Elegant%2520vintage%2520style%2520restaurant%2520interior%2520with%2520warm%2520lighting%2520wooden%2520tables%2520comfortable%2520seating%2520and%2520tasteful%2520decor%2520with%2520plants%2520and%2520soft%2520lighting%2520creating%2520a%2520cozy%2520yet%2520sophisticated%2520atmosphere%2520perfect%2520for%2520fine%2520dining&width=600&height=400&seq=4&orientation=landscape"
+                alt="Интерьер ресторана Shabby"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6">
+              О ресторане <span class="text-primary">Shabby</span>
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Ресторан Shabby был основан в 2018 году с целью создать уникальное
+              место, где современная кухня сочетается с винтажной атмосферой.
+              Наша философия - использовать только свежие, местные продукты для
+              создания изысканных блюд.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Наша команда профессиональных поваров постоянно совершенствует
+              меню, добавляя новые интересные блюда, сохраняя при этом любимые
+              позиции наших постоянных гостей. Мы гордимся тем, что создаем не
+              просто еду, а настоящие кулинарные впечатления.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary"
+                >
+                  <i class="ri-restaurant-line ri-lg"></i>
+                </div>
+                <span class="font-medium">Авторская кухня</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary"
+                >
+                  <i class="ri-leaf-line ri-lg"></i>
+                </div>
+                <span class="font-medium">Местные продукты</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary"
+                >
+                  <i class="ri-goblet-line ri-lg"></i>
+                </div>
+                <span class="font-medium">Винная карта</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Отзывы <span class="text-primary">наших гостей</span>
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Что говорят о нас наши посетители
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "Потрясающий ресторан с уникальной атмосферой. Блюда не только
+              вкусные, но и красиво оформлены. Обслуживание на высшем уровне.
+              Обязательно вернусь снова!"
+            </p>
+            <div class="flex items-center">
+              <div class="font-medium">Анна Петрова</div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "Лучший стейк, который я когда-либо пробовал! Винная карта
+              впечатляет своим разнообразием. Интерьер создает особую атмосферу.
+              Рекомендую всем любителям хорошей кухни."
+            </p>
+            <div class="flex items-center">
+              <div class="font-medium">Михаил Соколов</div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "Отмечали здесь годовщину свадьбы. Персонал создал для нас
+              особенную атмосферу. Десерты просто восхитительны! Спасибо за
+              прекрасный вечер и незабываемые впечатления."
+            </p>
+            <div class="flex items-center">
+              <div class="font-medium">Екатерина и Дмитрий Ивановы</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-8 md:p-12">
+              <h2 class="text-3xl font-bold mb-6">
+                Забронировать <span class="text-primary">столик</span>
+              </h2>
+              <p class="text-gray-600 mb-8">
+                Забронируйте столик заранее, чтобы гарантированно получить место
+                в нашем ресторане. Мы с нетерпением ждем встречи с вами!
+              </p>
+              <form class="space-y-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Имя</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                    placeholder="Ваше имя"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Телефон</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                    placeholder="+7 (___) ___-__-__"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="date"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Дата</label
+                  >
+                  <input
+                    type="date"
+                    id="date"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="time"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Время</label
+                  >
+                  <input
+                    type="time"
+                    id="time"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="guests"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Количество гостей</label
+                  >
+                  <select
+                    id="guests"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8"
+                  >
+                    <option value="1">1 гость</option>
+                    <option value="2">2 гостя</option>
+                    <option value="3">3 гостя</option>
+                    <option value="4">4 гостя</option>
+                    <option value="5">5 гостей</option>
+                    <option value="6+">6+ гостей</option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
+                >
+                  Забронировать
+                </button>
+              </form>
+            </div>
+            <div
+              class="md:w-1/2 bg-gray-200"
+              style="background-image: url('https://readdy.ai/api/search-image?query=Elegant%2520restaurant%2520interior%2520with%2520beautifully%2520set%2520tables%2520with%2520white%2520tablecloths%2520fine%2520china%2520and%2520crystal%2520glasses%2520in%2520a%2520warm%2520ambient%2520lighting%2520creating%2520a%2520sophisticated%2520atmosphere%2520for%2520fine%2520dining%2520experience&width=600&height=800&seq=5&orientation=portrait'); background-size: cover; background-position: center;"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" style="height: 40px; width: auto; filter: invert(100%);">
+</a>
+            <p class="text-gray-400">
+              Современный ресторан с винтажной душой в сердце Вологды
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Меню</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Основное меню</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Бизнес-ланч</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Винная карта</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Десерты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Услуги</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Бронирование</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Shabby-delivery.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Кейтеринг</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Мероприятия</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Контакты</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-400"
+                  >г. Вологда
+ул. Мира, д .82 6 этаж</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-400">+7 (8172) 55-55-55</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-400">info@shabby-restaurant.ru</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Shabby. Все права защищены.
+          </p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-visa-line ri-lg text-gray-400"></i>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-mastercard-line ri-lg text-gray-400"></i>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-paypal-line ri-lg text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".md\\:hidden");
+        const mobileMenu = document.createElement("div");
+        mobileMenu.className =
+          "fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out";
+        mobileMenu.innerHTML = `
+                      <div class="p-4 flex justify-between items-center border-b">
+                          <a href="#" class="font-['Pacifico'] text-2xl text-gray-800">Shabby</a>
+                          <button class="w-10 h-10 flex items-center justify-center text-gray-700">
+                              <i class="ri-close-line ri-lg"></i>
+                          </button>
+                      </div>
+                      <nav class="p-4">
+                          <ul class="space-y-4">
+                              <li><a href="#menu" class="block py-2 text-gray-700 hover:text-primary transition-colors">Меню</a></li>
+                              <li><a href="#culinary" class="block py-2 text-gray-700 hover:text-primary transition-colors">Кулинарный Университет</a></li>
+                              <li><a href="#whiskey" class="block py-2 text-gray-700 hover:text-primary transition-colors">Школа Виски</a></li>
+                              <li><a href="#delivery" class="block py-2 text-gray-700 hover:text-primary transition-colors">Доставка</a></li>
+                              <li><a href="#contacts" class="block py-2 text-gray-700 hover:text-primary transition-colors">Контакты</a></li>
+                          </ul>
+                      </nav>
+                  `;
+        document.body.appendChild(mobileMenu);
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+
+        mobileMenu.querySelector("button").addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+        });
+
+        // Форма бронирования
+        const bookingForm = document.querySelector("form");
+        if (bookingForm) {
+          bookingForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Спасибо за бронирование! Мы свяжемся с вами для подтверждения.");
+          });
+        }
+
+        // Форма подписки
+        const subscribeForm = document.querySelector("form:last-of-type");
+        if (subscribeForm) {
+          subscribeForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Спасибо за подписку на наши новости!");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

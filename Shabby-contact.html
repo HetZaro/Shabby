@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shabby - Контакты</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#f97316", secondary: "#fdba74" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <header class="w-full bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+    <a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" class="h-10 w-auto">
+</a>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a
+            href="Shabby-memu.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Меню</a
+          >
+          <a
+            href="Shabby-university.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Кулинарный Университет</a
+          >
+          <a
+            href="Shabby-wiskey.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Школа Виски</a
+          >
+          <a
+            href="Shabby-delivery.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Доставка</a
+          >
+          <a
+            href="Shabby-contact.html"
+            class="text-gray-700 hover:text-primary transition-colors"
+            >Контакты</a
+          >
+        </nav>
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="min-h-screen py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold mb-4">
+            Наши <span class="text-primary">Контакты</span>
+          </h1>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Мы всегда рады ответить на ваши вопросы и помочь с бронированием
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-white p-8 rounded shadow-sm">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-4"
+            >
+              <i class="ri-map-pin-line ri-lg"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Адрес</h3>
+            <p class="text-gray-600">г. Вологда, ул. Мира, д.82 6 этаж</p>
+          </div>
+
+          <div class="bg-white p-8 rounded shadow-sm">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-4"
+            >
+              <i class="ri-time-line ri-lg"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Часы работы</h3>
+            <p class="text-gray-600">Пн-Чт: 12:00 - 22:00</p>
+            <p class="text-gray-600">Пт-Сб: 12:00 - 23:00</p>
+            <p class="text-gray-600">Вс: 12:00 - 21:00</p>
+          </div>
+
+          <div class="bg-white p-8 rounded shadow-sm">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-4"
+            >
+              <i class="ri-phone-line ri-lg"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Телефоны</h3>
+            <p class="text-gray-600">8 (8172) 570-410 - ресто бар</p>
+            <p class="text-gray-600">8 (8172) 777-707 - доставка</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <div class="h-[600px] w-full">
+<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/shebbi/1800587658/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Шэбби</a><a href="https://yandex.ru/maps/21/vologda/category/restaurant/184106394/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Ресторан в Вологде</a><a href="https://yandex.ru/maps/21/vologda/category/food_and_lunch_delivery/184108273/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Доставка еды и обедов в Вологде</a><iframe src="https://yandex.ru/map-widget/v1/?ll=39.880571%2C59.211515&mode=poi&poi%5Bpoint%5D=39.880444%2C59.211570&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1800587658&z=19.83" width="100%" height="960" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+<a href="Shabby-main.html">
+  <img src="https://shabby.cafe/templates/shop.shabby/img/logo.svg" alt="Shabby Logo" style="height: 40px; width: auto; filter: invert(100%);">
+</a>
+            <p class="text-gray-400">
+              Современный ресторан с винтажной душой в сердце Вологды
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Меню</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Основное меню</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Бизнес-ланч</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Винная карта</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Десерты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Услуги</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Бронирование</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Shabby-delivery.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Кейтеринг</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Мероприятия</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Контакты</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-400"
+                  >ул. Мира, д.82 6 этаж, Вологда</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-400">8 (8172) 570-410</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mt-0.5 text-primary"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-400">info@shabby-restaurant.ru</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Shabby. Все права защищены.
+          </p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-visa-line ri-lg text-gray-400"></i>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-mastercard-line ri-lg text-gray-400"></i>
+            </div>
+            <div class="w-8 h-8 flex items-center justify-center">
+              <i class="ri-paypal-line ri-lg text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".md\\:hidden");
+        const mobileMenu = document.createElement("div");
+        mobileMenu.className =
+          "fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out";
+        mobileMenu.innerHTML = `
+          <div class="p-4 flex justify-between items-center border-b">
+            <a href="index.html" class="font-['Pacifico'] text-2xl text-gray-800">Shabby</a>
+            <button class="w-10 h-10 flex items-center justify-center text-gray-700">
+              <i class="ri-close-line ri-lg"></i>
+            </button>
+          </div>
+          <nav class="p-4">
+            <ul class="space-y-4">
+              <li><a href="menu.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Меню</a></li>
+              <li><a href="culinary.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Кулинарный Университет</a></li>
+              <li><a href="whiskey.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Школа Виски</a></li>
+              <li><a href="delivery.html" class="block py-2 text-gray-700 hover:text-primary transition-colors">Доставка</a></li>
+              <li><a href="contacts.html" class="block py-2 text-primary">Контакты</a></li>
+            </ul>
+          </nav>
+        `;
+        document.body.appendChild(mobileMenu);
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+
+        mobileMenu.querySelector("button").addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+        });
+      });
+    </script>
+  </body>
+</html>
